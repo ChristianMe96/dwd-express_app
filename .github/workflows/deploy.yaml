@@ -23,3 +23,8 @@ jobs:
         with:
           push: true
           tags: woudan/express_app:latest
+
+      - name: Deploy
+        uses: wei/curl@v1
+        with:
+          args: ${{ secrets.RENDER_DEPLOY_URL }}
